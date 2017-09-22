@@ -1,0 +1,46 @@
+{
+  "name": "brewcalcs",
+  "version": "0.0.1",
+  "description": "Homebrew calculation helper library",
+  "author": "Ryan Chatterton <chatters@gmail.com> (http://rchatter.com/)",
+  "license": "MIT",
+  "main": "src/index.js",
+  "jsnext:main": "index.es.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brew-code/brewcalcs.git"
+  },
+  "keywords": [
+    "homebrewing",
+    "beer",
+    "mash",
+    "BIAB",
+    "Brew In a Bag",
+    "brewing",
+    "calculation",
+    "calcs",
+    "javascript",
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/brew-code/brewcalcs/issues"
+  },
+  "homepage": "https://github.com/brew-code/brewcalcs#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^4.3.1",
+    "standard": "^10.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "dependencies": {}
+}

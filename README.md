@@ -1,1 +1,1 @@
-# brewcalcs
+# brewcalcs.js
