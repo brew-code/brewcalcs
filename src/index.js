@@ -1,5 +1,1 @@
-const foo = 'hello world'
-
-export default () => {
-  console.log(`well ${foo}`)
-}
+import { kgToOz } from "./types";

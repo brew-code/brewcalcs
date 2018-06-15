@@ -5,7 +5,20 @@
   "author": "Ryan Chatterton <chatters@gmail.com> (http://rchatter.com/)",
   "license": "MIT",
   "main": "src/index.js",
-  "jsnext:main": "index.es.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "flow": "flow",
+    "jest": "jest src",
+    "test": "yarn run flow && yarn run jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "precommit": "lint-staged && yarn test",
+    "prettier": "prettier --write \"src/**/*.js\"",
+    "flow-typed": "./node_modules/.bin/flow-typed",
+    "flow-typed:install": "./node_modules/.bin/flow-typed install"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brew-code/brewcalcs.git"
@@ -28,19 +41,22 @@
   "homepage": "https://github.com/brew-code/brewcalcs#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-watch": "^4.3.1",
-    "standard": "^10.0.3"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.74.0",
+    "flow-typed": "^2.4.0",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "lint-staged": "^7.2.0",
+    "prettier": "1.13.5",
+    "rollup": "^0.60.7"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
-  },
-  "dependencies": {}
+  "dependencies": {},
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
