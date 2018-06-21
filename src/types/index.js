@@ -1,5 +1,5 @@
 // @flow
 
-import { kgToOz } from "./volumes";
+import { kgToOz } from "../utils/conversions";
 
 export { kgToOz };
