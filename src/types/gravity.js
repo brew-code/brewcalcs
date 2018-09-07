@@ -22,6 +22,15 @@ export const originalGravity = (
   return (amountOfExtract * pointsPerGallon) / batchSize;
 };
 
+/**
+ *
+ *
+ * @param {number} amountOfExtract
+ * @param {number} pointsPerGallon
+ * @param {number} efficiency
+ * @param {number} batchSize
+ * @returns {number}
+ */
 export const originalGravityByEfficiency = (
   amountOfExtract: number,
   pointsPerGallon: number,
@@ -34,7 +43,7 @@ export const originalGravityByEfficiency = (
 /**
  * Alcohol by Volume (ABV)
  * ABV = (1.05/0.79) x ((OG – TG) / FG)  x 100
- * @param {number} og - orginal gravity or starting gravity
+ * @param {number} og - original gravity or starting gravity
  * @param {number} fg - final gravity or your target gravity
  * @return {number} ABV
  */
@@ -45,7 +54,7 @@ export const abv = (og: number, fg: number) => {
 /**
  * Alcohol by Weight (ABW)
  * formula: ((Original Gravity - Final Gravity) * 1.05) / Final Gravity
- * @param {number} og - orginal gravity or starting gravity
+ * @param {number} og - original gravity or starting gravity
  * @param {number} fg - final gravity or your target gravity
  */
 export const abw = (og: number, fg: number) => {
@@ -84,7 +93,7 @@ export const plato = (sg: number) => {
  * much sugar the yeast will consume. Yeast manufacturers will publish the
  * apparent attenuation ranges of their yeast strains. Most yeast strains
  * attenuation is between 65% - 85%
- * @param  {number} og - orginal gravity or starting gravity
+ * @param  {number} og - original gravity or starting gravity
  * @param  {number} fg - final gravity or your target gravity
  * @return {number}
  */
@@ -150,7 +159,7 @@ export const srm = (
 
 /**
  * Calories From Carbs
- * @param  {number} og - orginal gravity or starting gravity
+ * @param  {number} og - original gravity or starting gravity
  * @param  {number} fg - final gravity or your target gravity
  * @return {number}
  */
@@ -160,7 +169,7 @@ export const caloriesFromCarbs = (og: number, fg: number) => {
 
 /**
  * Calories From Alcohol
- * @param  {number} og - orginal gravity or starting gravity
+ * @param  {number} og - original gravity or starting gravity
  * @param  {number} fg - final gravity or your target gravity
  * @return {number}
  */
@@ -170,7 +179,7 @@ export const caloriesFromAlcohol = (og: number, fg: number) => {
 
 /**
  * Total calories
- * @param  {number} og - orginal gravity or starting gravity
+ * @param  {number} og - original gravity or starting gravity
  * @param  {number} fg - final gravity or your target gravity
  * @return {number}
  */

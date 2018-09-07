@@ -1,5 +1,5 @@
 // @flow
 
-import { kgToOz } from "../utils/conversions";
+import { kgToOz, lbToKg, kgTolbOz } from "../utils/conversions";
 
-export { kgToOz };
+export { kgToOz, lbToKg, kgTolbOz };
