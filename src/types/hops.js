@@ -1,5 +1,12 @@
 // @flow
 
+/**
+ *
+ *
+ * @param {number} weightInOz
+ * @param {number} alphaAcids
+ * @returns {number}
+ */
 export const AAU = (weightInOz: number, alphaAcids: number) => {
   return weightInOz * alphaAcids;
 };
@@ -21,12 +28,4 @@ export const tinseth = (
     (((aa / 100.0) * amount * 1000000) / batchSize) *
     utilizationFactor
   );
-
-  // const sg = og;
-  // return (
-  //   1.65 *
-  //   Math.pow(0.000125, sg) *
-  //   ((1 - Math.pow(Math.E, -0.04 * time)) / maximumUtilizationValue) *
-  //   ((aa * amount * 1000) / batchSize)
-  // );
 };
